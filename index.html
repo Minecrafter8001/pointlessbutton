@@ -27,10 +27,20 @@
         }
     </style>
 </head>
-<body>
-    <button onclick="">Click me!</button>
-</body>
+    <body>
+        <button id="pointlessButton">Click me!</button>
+        <script>
+            document.getElementById("pointlessButton").addEventListener("click", () => {
+                if (window.umami && umami.track) {
+                    umami.track("button_press");
+                } else {
+                    console.warn("Umami not loaded yet");
+                }
+            });
+        </script>
+    </body>
 </html>
+
 
 
 
