@@ -28,16 +28,6 @@
 </head>
 <body>
     <button id="pointlessButton">Click me!</button>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="6c922f00-14f0-42b7-978e-5ca336a32597"></script>
-
-    <script>
-        document.getElementById("pointlessButton").addEventListener("click", () => {
-            if (window.umami && umami.track) {
-                umami.track("button_press");
-            } else {
-                console.warn("Umami not loaded yet");
-            }
-        });
-    </script>
 </body>
 </html>
+
